@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.news.NewsListFragment">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:paddingHorizontal="@dimen/dp_16">
+
+        <FrameLayout
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_6"
+                android:layout_gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/ic_search"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical" />
+
+        </FrameLayout>
+
+        <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:src="@drawable/ic_default_head"
+                android:scaleType="fitXY"
+                android:layout_gravity="end|center_vertical" />
+
+    </FrameLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_split_line"
+            android:layout_gravity="bottom"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
