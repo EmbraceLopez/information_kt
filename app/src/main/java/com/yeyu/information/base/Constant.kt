@@ -10,12 +10,12 @@ object Constant {
 
     const val DEFAULT_PAGE_SIZE = 10
 
-    const val SERVER_URL = "http://campusinfo.shop:8080"
+    const val SERVER_URL = "http://example.com"
 
     const val BASE_URL = SERVER_URL + "/api/"
 
     //密钥
-    const val APP_SECRET = "c37Am244P33u0638S563"
+    const val APP_SECRET = ""
 
     //图片地址
     fun fillImgUrl(url: String): String? {
